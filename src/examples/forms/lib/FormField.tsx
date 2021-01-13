@@ -7,9 +7,6 @@ interface FormFieldParams {
     value: any;
     doValidate: (value: any) => boolean;
     errorText?: string;
-
-    // TODO - lots of things, could also pass in display react nodes if you wanted to be able to customize
-    // TODO - what about not checking validty til it's been changed? :thinking-face:
 }
 
 export const FormField: React.FC<FormFieldParams> = (params) => {

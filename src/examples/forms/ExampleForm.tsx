@@ -5,12 +5,7 @@ import {FormHelperText, Input, InputLabel, Typography} from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 import {MiniForm} from "./MiniForm";
 
-// TODO - write test with separate components & form nesting??
-// TODO - asynchronous & race conditions with network response
-// TODO - composable validation
-// TODO - datepicker example - start & end dates each with their own validation, but then also checking against each other
-
-export const ExampleForms: React.FC = () => {
+export const ExampleForm: React.FC = () => {
     const [isValid, setIsValid] = useState<boolean>(false);
     const [formValues, setFormValues] = useState<{ [key: string]: any }>({});
     const [alValue, setAlValue] = useState<string>("Al");
