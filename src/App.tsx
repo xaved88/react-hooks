@@ -13,6 +13,7 @@ import {
 } from "@material-ui/core";
 import {ExampleUseEffect} from "./examples/useEffect/ExampleUseEffect";
 import {ExampleUseContext} from "./examples/useContext/ExampleUseContext";
+import {ExampleForms} from "./examples/forms/ExampleForms";
 
 const theme = createMuiTheme({
     palette: {
@@ -66,6 +67,7 @@ function App() {
                         <Tab label="Use Effect" {...makeTabProps(1)} />
                         <Tab label="Use Context" {...makeTabProps(2)} />
                         <Tab label="Event Dispatcher" {...makeTabProps(3)} />
+                        <Tab label="Forms" {...makeTabProps(4)} />
                     </Tabs>
                 </AppBar>
 
@@ -84,6 +86,9 @@ function App() {
                         </TabPanel>
                         <TabPanel selectedValue={selectedTab} id={3}>
                             <DispatcherExample/>
+                        </TabPanel>
+                        <TabPanel selectedValue={selectedTab} id={4}>
+                            <ExampleForms/>
                         </TabPanel>
                     </CardContent>
                 </Card>

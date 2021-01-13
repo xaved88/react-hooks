@@ -28,7 +28,7 @@ export const UseEffectSameMethod: React.FC = () => {
     };
 
     const [text, setText] = useState<string>('original text');
-    const [callback, setCallback] = useState<() => void>(method);
+    const [callback, setCallback] = useState<() => void>(() => method);
 
     return (
         <>
@@ -40,7 +40,7 @@ export const UseEffectSameMethod: React.FC = () => {
             </Typography>
             <Button
                 variant={'contained'}
-                onClick={() => setCallback(method)}
+                onClick={() => setCallback(() => method)}
             >Update Method</Button>
             <Child callback={callback}/>
         </>

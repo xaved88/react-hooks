@@ -32,7 +32,7 @@ export const UseEffectDifferentMethod: React.FC = () => {
     }
 
     const [text, setText] = useState<string>('original text');
-    const [callback, setCallback] = useState<() => void>(method);
+    const [callback, setCallback] = useState<() => void>(() => method);
 
     return (
         <>
@@ -44,7 +44,7 @@ export const UseEffectDifferentMethod: React.FC = () => {
             </Typography>
             <Button
                 variant={'contained'}
-                onClick={() => setCallback(secondMethod)}
+                onClick={() => setCallback(() => secondMethod)}
             >Change Method</Button>
             <Child callback={callback}/>
         </>

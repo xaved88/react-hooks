@@ -1,10 +1,14 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from "react";
 import {Divider, Typography} from "@material-ui/core";
 import {ContextExample, ContextExampleType} from "./ExampleUseContext";
 import {UseContextGrandChild} from "./UseContextGrandChild";
 
 export const UseContextChild: React.FC = () => {
   const currentContext: ContextExampleType = useContext<ContextExampleType>(ContextExample);
+
+  useEffect(() => {
+    currentContext.setName && currentContext.setName('Norman');
+  },[]);
 
   return (
       <>
