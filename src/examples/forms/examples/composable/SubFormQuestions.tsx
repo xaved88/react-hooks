@@ -1,5 +1,5 @@
 import React, {useCallback, useState} from "react";
-import {FormField} from "./lib/FormField";
+import {FormField} from "../../lib/FormField";
 import {Input, InputLabel} from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 
@@ -7,7 +7,6 @@ export const SubFormQuestions: React.FC = () => {
     const [mathValue, setMathValue] = useState<number>(0);
     const [colorValue, setColorValue] = useState<string>("Red");
 
-    // TODO -> make these callback thinkgies proper, check their double-trippleness
     const validateMath = useCallback((value: number): string => {
         return value === 2 ? '' : '!bonk go back to school yo';
     }, []);

@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import {FormField} from "./lib/FormField";
+import {FormField} from "../../lib/FormField";
 import {Input, InputLabel} from "@material-ui/core";
 import Box from "@material-ui/core/Box";
-import {FormValidationMethodType, FormValidators} from "./lib/FormValidators";
+import {FormValidationMethodType, FormValidators} from "../../lib/FormValidators";
 
 export const MainFormQuestions: React.FC = () => {
     const [alValue, setAlValue] = useState<string>("Al");

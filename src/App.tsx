@@ -13,8 +13,8 @@ import {
 } from "@material-ui/core";
 import {ExampleUseEffect} from "./examples/useEffect/ExampleUseEffect";
 import {ExampleUseContext} from "./examples/useContext/ExampleUseContext";
-import {ExampleForm} from "./examples/forms/ExampleForm";
-import {ExampleComposableForm} from "./examples/composableForms/ExampleComposableForm";
+import {ExampleComposableForm} from "./examples/forms/examples/composable/ExampleComposableForm";
+import {ExampleAsyncForm} from "./examples/forms/examples/async/ExampleAsyncForm";
 
 const theme = createMuiTheme({
     palette: {
@@ -68,8 +68,8 @@ function App() {
                         <Tab label="Use Effect" {...makeTabProps(1)} />
                         <Tab label="Use Context" {...makeTabProps(2)} />
                         <Tab label="Event Dispatcher" {...makeTabProps(3)} />
-                        <Tab label="Form" {...makeTabProps(4)} />
-                        <Tab label="Composable Form" {...makeTabProps(5)} />
+                        <Tab label="Composable Form" {...makeTabProps(4)} />
+                        <Tab label="Async Form" {...makeTabProps(5)} />
                     </Tabs>
                 </AppBar>
 
@@ -88,10 +88,10 @@ function App() {
                             <DispatcherExample/>
                         </TabPanel>
                         <TabPanel selectedValue={selectedTab} id={4}>
-                            <ExampleForm/>
+                            <ExampleComposableForm/>
                         </TabPanel>
                         <TabPanel selectedValue={selectedTab} id={5}>
-                            <ExampleComposableForm/>
+                            <ExampleAsyncForm/>
                         </TabPanel>
                     </CardContent>
                 </Card>
